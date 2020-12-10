@@ -142,7 +142,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="text-center py-5">
-            <h2 class="py-3">Ahïa Solutions</h2>
+            <h2 class="py-3">GloomBerg Stonks</h2>
             <div class="mx-auto heading-line"></div>
         </div>
         <div class="row mb-3">

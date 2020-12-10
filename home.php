@@ -107,11 +107,12 @@
                   }
                 ?>
             </p>
-            <a href="index.php">
-                <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Log Out</button>
-            </a>
+            
             <a href="trades.php">
                 <button class="animated fadeIn delay-3s btn btn-lg btn-outline-secondary">My Trades</button>
+            </a>
+            <a href="logtrade.php">
+                <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Log Trade</button>
             </a>
         </div>
     </section>
