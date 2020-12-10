@@ -44,7 +44,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-secondary" href="contact.php">Contact Us</a>
+                        <a class="nav-link btn btn-outline-secondary" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
@@ -72,8 +72,8 @@
                             we will never know if our money printer is working or not.  
                         </p>
                         <div class="text-center">
-                            <a href="contact.php">
-                                <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Contact Us</button>
+                            <a href="login.php">
+                                <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Login</button>
                             </a>
                             <a href="signup.php">
                                 <button class="animated fadeIn delay-3s btn btn-lg btn-outline-secondary">Sign Up</button>
@@ -159,13 +159,13 @@
                     </li>
                 
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="copyright text-center py-3 border-top text-muted">
-            <p>Ahïa Solutions &copy; 2020</p>
+            <p>GloomBerg&copy; 2020</p>
         </div>
     </footer>
     <!-- Optional JavaScript -->

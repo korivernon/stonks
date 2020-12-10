@@ -41,11 +41,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About Us</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="services.php">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-secondary" href="contact.php">Contact Us</a>
+                        <a class="nav-link btn btn-outline-secondary" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +88,7 @@
                 sole traders, and established organizations to <br>
                 improve performance in the world of stonks. <br>
             </p>
-            <button class=" animated fadeIn delay-3s btn btn-lg btn-primary">Contact Us</button>
+            <button class=" animated fadeIn delay-3s btn btn-lg btn-primary">Sign Up</button>
         </div>
     </section>
 
@@ -143,7 +141,7 @@
                         <a class="nav-link" href="about.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                 </ul>
             </div>
