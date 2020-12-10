@@ -61,6 +61,7 @@
         echo "With " . $performance . "% negative this year, you're NOT going places!";
     }
   ?>
+  
   <br><br>
   <a href="index.php"><button>Log Out</button></a>
   <a href="trades.php"><button>My Trades</button></a>
