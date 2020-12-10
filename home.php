@@ -95,7 +95,7 @@
                   echo "<b>Your personal profit is $</b>" . $pProfit;
                   echo "<br>";
 
-                  echo "<br><br><h1>PERFROMANCE STATS</h1>";
+                  echo "<br><br><h1>PERFORMANCE STATS</h1>";
                   
                   $performance = 40.7;
                   if ($pProfit > 0) {
