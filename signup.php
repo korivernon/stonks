@@ -10,7 +10,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      
+  <h1>Welcome to GloomBerg Stonks</h1>
+  <p><b>GloomBerg</b> is your go-to platform when it comes to personal performance and organization analysis.</p>
+      <br>
+      <p>Sign up Below:</p>
+      <form action="home.php" method="post">
+        Username: <input name="username" type="text">
+        <br><br>
+        First Name: <input name="firstname" type="text">
+        <br><br>
+        Last Name: <input name="lastname" type="text">
+        <br><br>
+        Password: <input name="password" type="password">
+        <br><br>
+        Organization ID: <input name="orgid" type="text">
+        <br><br>
+        Social Security Number (xxx-xxx-xxx): <input name="ssn" type="password">
+        <br><br>
+        Address: <input name="address" type="text">
+        <br><br>
+        <input type="Submit">
+      </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
