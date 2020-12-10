@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>GloomBerg Stonks</title>
+    <title>About</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -41,9 +42,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.php">Services</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-secondary" href="contact.php">Contact Us</a>
                     </li>
@@ -52,50 +51,66 @@
         </div>
     </nav>
 
-    <!-- Home -->
+    <!-- Section 3 -->
+
     <section class="home animated zoomIn container mb-5">
         <div class="row mt-5">
             <div class="animated text-center zoomIn delay-1s col-lg-6 mt-5 py-5">
                 <div>
-                  <img src="images/stonks.jpg" width="75%" height="75%" alt="">
+                  <img src="images/moneyprinter.png" width="75%" height="75%" alt="">
                 </div>
             </div>
             
             <div class="col-lg-6 my-5">
                 <div class="row">
                     <div class="home-content offeset-lg-1 col-lg-10 overflow-hidden">
-                        <h1 class="animated slideInLeft delay-1s pb-3">Trading Floor Solutions</h1>
-                        <p class="animated slideInLeft delay-1s overflow-hidden pb-3">
-                            <b>GloomBerg</b> is your go-to platform when it comes to personal performance and organization analysis.
+                        <h1 class="animated slideInLeft delay-1s pb-3">Providing Trading Floor Solutions for the Modern Era</h1>
+                        <p class="animated slideInRight delay-1s overflow-hidden pb-3">
+                            
+                            This is the Modern Era. We should be able to have access to a journal 
+                            visible everywhere where we can access our stonk performance. If we can't then 
+                            we will never know if our money printer is working or not.  
                         </p>
-                        <a href="login.php">
-                            <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Log In</button>
-                        </a>
-                        <a href="signup.php">
-                            <button class="animated fadeIn delay-3s btn btn-lg btn-outline-secondary">Sign Up</button>
-                        </a>
+                        <div class="text-center">
+                            <a href="contact.php">
+                                <button class="animated fadeIn delay-3s btn btn-lg btn-secondary">Contact Us</button>
+                            </a>
+                            <a href="signup.php">
+                                <button class="animated fadeIn delay-3s btn btn-lg btn-outline-secondary">Sign Up</button>
+                            </a>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
-    <!-- Mission-->
-    <section class="our-mission py-5">
-        <div class="text-center py-5">
-            <h2 class="py-3 animated slideInLeft delay-1s">Our Mission</h2>
-            <div class="mx-auto heading-line"></div>
-            <p class="py-3 animated slideInLeft delay-1s">
-                We seek to form mutually beneficial partnerships with <br>
-                sole traders, and established organizations to <br>
-                improve performance in the world of stonks. <br>
-            </p>
-            <button class=" animated fadeIn delay-3s btn btn-lg btn-primary">Contact Us</button>
+    <section class="home animated zoomIn container">
+        <div class="row">
+            
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="home-content offeset-lg-1 col-lg-10 pb-5 overflow-hidden">
+                        <h1 class="animated slideInLeft delay-1s pb-3">Our Team</h1>
+                        <p class="animated slideInRight delay-1s overflow-hidden pb-3">
+                            
+                            <b>Chuwei Guo</b> - Foot PHP Engineer - NYU Computer Science
+                            <br><br>
+                            <b>Artur Janik</b> - Head Database Engineeer - NYU Computer Science
+                            <br><br>
+                            <b>Kori Vernon</b> - Hair PHP Engineer - NYU Computer Science
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="animated zoomIn delay-1s col-lg-6 my-5 mt-5">
+                <img height="50%" width="50%" class="img-fluid" src="images/teamphoto.png" alt="">
+            </div>
         </div>
     </section>
-
+   
     <!-- Services -->
-    <section class="services">
+    <section class="services-b">
         <div class="container text-center py-5">
             <h2 class="py-3 animated slideInLeft delay-1s">Services</h2>
             <div class="mx-auto heading-line"></div>
@@ -127,7 +142,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="text-center py-5">
-            <h2 class="py-3">GloomBerg</h2>
+            <h2 class="py-3">Ahïa Solutions</h2>
             <div class="mx-auto heading-line"></div>
         </div>
         <div class="row mb-3">
@@ -142,6 +157,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About Us</a>
                     </li>
+                
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
@@ -149,7 +165,7 @@
             </div>
         </div>
         <div class="copyright text-center py-3 border-top text-muted">
-            <p>GloomBerg &copy; 2020</p>
+            <p>Ahïa Solutions &copy; 2020</p>
         </div>
     </footer>
     <!-- Optional JavaScript -->
