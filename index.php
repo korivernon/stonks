@@ -29,7 +29,7 @@
   <body>
     <nav class="navbar navbar-expand-md ">
         <div class="container">
-            <a href="index.html">Ahïa Solutions</a>
+            <a href="index.php">GloomBerg</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -56,16 +56,16 @@
     <!-- Home -->
     <section class="home animated zoomIn container mb-5">
         <div class="row mt-5">
-            <div class="animated text-center zoomIn delay-1s col-lg-6 mt-5 py-5">
+            <!-- <div class="animated text-center zoomIn delay-1s col-lg-6 mt-5 py-5">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-LMbL9UeORo"></iframe>
                   </div>
-            </div>
+            </div> -->
             
             <div class="col-lg-6 my-5">
                 <div class="row">
                     <div class="home-content offeset-lg-1 col-lg-10 overflow-hidden">
-                        <h1 class="animated slideInLeft delay-1s pb-3">Marketplace Solutions</h1>
+                        <h1 class="animated slideInLeft delay-1s pb-3">Trading Floor Solutions</h1>
                         <p class="animated slideInLeft delay-1s overflow-hidden pb-3">
                             <b>GloomBerg</b> is your go-to platform when it comes to personal performance and organization analysis.
                         </p>
@@ -138,7 +138,7 @@
                 </p>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
