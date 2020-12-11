@@ -1,0 +1,85 @@
+* commands
+  psql -U postgres -h localhost
+* sql code
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+  DROP TABLE Transaction;
+  DROP TABLE Organization;
+  DROP TABLE User;
+  DROP TABLE Market;
+#+end_src
+
+#+RESULTS:
+| DROP TABLE |
+|------------|
+| DROP TABLE |
+
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+  CREATE TABLE Organization(
+    OrgID varchar(256) primary key,
+    compName varchar(256), /* KORI WHAT */
+    Address varchar(256),
+    UserID varchar(256)
+  );
+#+end_src
+
+#+RESULTS:
+| CREATE TABLE |
+|--------------|
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+    CREATE TABLE Transaction(
+      TransactionID varchar(256) primary key,
+      Ticker varchar(256), /* TODO KORI WHAT IS THIS? */
+      purchasedPrice bigint, 
+      soldPrice bigint, 
+      Security_type varchar(256),
+      Reasoning varchar(8192),
+      orgID varchar(256) references Organization(orgID) /* might need to add this afterwards? */
+    );
+#+end_src
+
+#+RESULTS:
+| CREATE TABLE |
+|--------------|
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+  CREATE TABLE Users(
+    UserID varchar(256),
+    First varchar(256),
+    Last varchar(256),
+    Username varchar(256),
+    Password varchar(256), /* never do this in practice */
+    SSN varchar(9) primary key, /* also this, while we're at it */
+    Address varchar(256),
+    OrgID varchar(256) references Organization(OrgID)
+  );
+#+end_src
+
+#+RESULTS:
+| CREATE TABLE |
+|--------------|
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+  CREATE TABLE Market(
+    MarketID varchar(256) primary key,
+    MarketType varchar(256) /* TODO KORI WHAT IS THIS */
+  );
+#+end_src
+
+#+RESULTS:
+|   |
+
+#+begin_src sql :engine postgresql :dbhost localhost :dbuser postgres :database postgres
+\d
+#+end_src
+
+#+RESULTS:
+| List of relations |              |       |          |
+|-------------------+--------------+-------+----------|
+| Schema            | Name         | Type  | Owner    |
+| public            | market       | table | postgres |
+| public            | organization | table | postgres |
+| public            | transaction  | table | postgres |
+| public            | users        | table | postgres |
