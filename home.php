@@ -56,56 +56,89 @@
             <div class="animated fadeIn delay-1s mx-auto heading-line"></div>
         <div class="animated fadeIn delay-1s container w-75 py-3">
             <p class="py-3 text-justify">
-                <?php
-                  $uname = $_POST["username"];
-                  echo "Hello, " . $uname ;
-                  // if there is no user then do not direct them here...
-                  $org = $_POST["organization"];
-                  echo "<br>";
-                  if ($org == NULL){
-                      echo "You do not belong to an organization :(\n";
-                  } else {
-                      echo "You belong to " . $org . "\n";
 
-                      // now let's go into analytics
+            <?php
+            
+            require 'vendor/autoload.php';
 
-                      echo "<br><br><h1>ORGANIZATION STATISTICS</h1>";
-                      
-                      //organization rank
-                      echo "<br>";
-                      $orgRank = 10;
-                      echo "<b>Your organization is ranked: </b>" . $orgRank;
-                      echo "<br>";
+            use GloomBerg\Connection as Connection;
+            use GloomBerg\GetAcc as GetAcc;
+            use GloomBerg\CreateUser as CreateUser;
+            ?>
 
-                      //organization profit
-                      $orgProfit = 1000000;
-                      echo "<b>Your Organization profit is $</b>" . $orgProfit;
-                      echo "<br>";
-                  }
-                  echo "<br><br><h1>PERSONAL STATISTICS</h1>";
+            <?php
+                try {
 
-                  //organization rank
-                  echo "<br>";
-                  $pRank = 1069;
-                  echo "<b>You are ranked: </b>" . $pRank;
-                  echo "<br>";
+                    $pdo = Connection::get()->connect();
+                    $newUser = new CreateUser($pdo);
 
-                  //organization profit
-                  $pProfit = 3083;
-                  echo "<b>Your personal profit is $</b>" . $pProfit;
-                  echo "<br>";
+                    // insert a user into the users table
 
-                  echo "<br><br><h1>PERFORMANCE STATS</h1>";
-                  
-                  $performance = 40.7;
-                  if ($pProfit > 0) {
-                      echo "Your performance this year is fantastic! ";
-                      echo "With " . $performance . "% positive this year, you're going places!";
-                  } else {
-                      echo "You are lacking my friend. Maybe pick up something else... ";
-                      echo "With " . $performance . "% negative this year, you're NOT going places!";
-                  }
-                ?>
+                    $fname = $_POST["firstname"];
+                    $lname = $_POST["lastname"];
+                    $orgid = $_POST["orgid"];
+                    $ssn = $_POST["ssn"];
+                    $uname = $_POST["username"];
+                    $password = $_POST["password"];
+
+                    //insert new user
+
+                    $newUser->insertUser($fname,$lname, $umame, $password, $ssn, $address, $orgid);
+                    
+                    //getting the information with the user and password
+                    try{
+                        $storeProc = new StoreProc($pdo);
+                        $account = $storeProc->getAccount($uname, $password);
+                    }catch (\PDOException $e) {
+                        echo 'unable to load your account. create one <a href="signup.php">here</a> or try again <a href="login.php">here</a>.';
+                    }
+            ?>
+                    <p><?php echo "Hello, " . htmlspecialchars($account['First'])?></p><br>
+                    <p><?php 
+                        if ($orgID == NULL){
+                            echo "You do not belong to an organization :(\n";
+                        } else {
+                            echo "You belong to " . $orgID . "\n";
+                        ?>
+                    </p>
+                    <?php
+                        echo "<br><br><h1>ORGANIZATION STATISTICS</h1>";
+                        
+                        //organization rank
+                        echo "<br>";
+                        $orgRank = 10;
+                        echo "<b>Your organization is ranked: </b>" . $orgRank;
+                        echo "<br>";
+
+                        //organization profit
+                        $orgProfit = 1000000;
+                        echo "<b>Your Organization profit is $</b>" . $orgProfit;
+                        echo "<br>";
+                    }
+                    echo "<br><br><h1>PERSONAL STATISTICS</h1>";
+
+                    //organization rank
+                    echo "<br>";
+                    $pRank = 1069;
+                    echo "<b>You are ranked: </b>" . $pRank;
+                    echo "<br>";
+
+                    //organization profit
+                    $pProfit = 3083;
+                    echo "<b>Your personal profit is $</b>" . $pProfit;
+                    echo "<br>";
+
+                    echo "<br><br><h1>PERFORMANCE STATS</h1>";
+                    
+                    $performance = 40.7;
+                    if ($pProfit > 0) {
+                        echo "Your performance this year is fantastic! ";
+                        echo "With " . $performance . "% positive this year, you're going places!";
+                    } else {
+                        echo "You are lacking my friend. Maybe pick up something else... ";
+                        echo "With " . $performance . "% negative this year, you're NOT going places!";
+                    }
+                    ?>
             </p>
             
             <a href="trades.php">

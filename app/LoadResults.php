@@ -1,6 +1,6 @@
 <?php
 
-public function loadResults($UserID) {
+function loadResults($UserID) {
     // prepare the select statement
     $stmt = $this->pdo->query('SELECT TransactionID, Ticker, purchasedPrice, soldPrice, Security_type, Reasoning, OrgID, UserID'
     . 'FROM Transaction'
