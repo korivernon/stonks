@@ -19,7 +19,7 @@ class Connection {
             $params['user'],
             $params['password']);
         $pdo = new \PDO(conStr);
-        $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDOO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
         return $pdo;
     }
