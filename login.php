@@ -118,7 +118,7 @@
                         <label for="Password"></label>
                         <label>Password:</label>
                         <input name="password" class="form-control"  type="password" placeholder="Enter Password">
-                        <!-- <small class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        
                     </div>
                     <button type="submit" class="btn btn-lg btn-primary">Login</button>
                     
