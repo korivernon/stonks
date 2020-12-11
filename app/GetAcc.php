@@ -1,4 +1,5 @@
 <?php
+    // grab user information 
     function getAccount($UserID, $Password) {
         $stmt = $this->pdo->query('SELECT * FROM Users WHERE UserID = :UserID AND Password = :Password');
         $account = [];

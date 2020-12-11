@@ -1,6 +1,6 @@
 <?php
 
-public function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type, $Reasoning, $OrgID, $UserID){
+function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type, $Reasoning, $OrgID, $UserID){
 
     $sql = 'INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, $Security_type, Reasoning, OrgID, UserID)'
         . 'VALUES (:Ticker, :purchasedPrice, soldPrice, :Security_type, :Reasoning, :OrgID, :UserID)';
@@ -14,10 +14,11 @@ public function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Securit
     $stmt->bindValue(':Reasoning', $Reasoning);
 
     $stmt->bindValue(':OrgID', $OrgID);
-    $stmt->bindValue('UserID', $UserID);
+    $stmt->bindValue(':UserID', $UserID);
 
-    stmt->execute();
+    $stmt->execute();
 
-    // come back 
+    // how to add a distinct transaction id.. 
+    // https://www.postgresqltutorial.com/postgresql-php/insert/
 }
 ?>
