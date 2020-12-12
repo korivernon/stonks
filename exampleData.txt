@@ -1,30 +1,27 @@
-INSERT INTO Users
-VALUES ('Kori', 'Vernon', 'Soccermomkori', 'iloveorcas87', '123-456-7890', '3412 Birk Bluff',1);
-INSERT INTO Users
-VALUES ('Chuwei', 'Guo', 'Chewwybar', 'notachewybar', '123-446-7890', '1234 Awesome Address',2);
-INSERT INTO Users
-VALUES ('Artur', 'Janik', 'NativeVex', 'NotANativeVex', '123-444-7890' , '1235 Awesome Address',3);
+INSERT INTO Users VALUES ('Kori', 'Vernon', 'Soccermomkori', 'iloveorcas87', '123-456-7890', '3412 Birk Bluff',1);
+INSERT INTO Users VALUES ('Chuwei', 'Guo', 'Chewwybar', 'notachewybar', '123-446-7890', '1234 Awesome Address',2);
+INSERT INTO Users VALUES ('Artur', 'Janik', 'NativeVex', 'NotANativeVex', '123-444-7890' , '1235 Awesome Address',3);
 
-INSERT INTO Transactions
-VALUES ('CHEGG', 110, 140,  'OPTION', 'CHEGG PRINTER GO BRR', '123-444-7890', 2);
-INSERT INTO Transactions
-VALUES ('AAPL', 110, 120,  'OPTION', 'Apple Moon', '123-456-7890', 1);
-INSERT INTO Transactions
-VALUES ('NIO', 110, 300,  'OPTION', 'NIO Moon', '123-456-7890', 1);
-INSERT INTO Transactions
-VALUES ('PLTR', 110, 69,  'OPTION', 'PLTR Moon', '123-456-7890', 1);
-INSERT INTO Transactions
-VALUES ('PLTR', 110, 120,  'OPTION', 'MONEY PRINTER GO BRR', '123-446-7890', 2);
-INSERT INTO Transactions
-VALUES ('AAPL', 110, 140,  'OPTION', 'TUITION PRINTER GO BRR', '123-446-7890', 2);
-INSERT INTO Transactions
-VALUES ('CHEGG', 110, 140,  'OPTION', 'CHEGG PRINTER GO BRR', '123-446-7890', 2);
-INSERT INTO Transactions
-VALUES ('COOL', 110, 190,  'OPTION', 'COOL PRINTER GO BRR', '123-444-7890', 3);
-INSERT INTO Transactions
-VALUES ('ICE', 110, 170,  'OPTION', 'ICEEY PRINTER GO BRR', '123-444-7890', 3);
-INSERT INTO Transactions
-VALUES ('COOL', 80, 70,  'OPTION', 'COOL PRINTER GO BRR', '123-444-7890', 3);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('CHEGG',                110,            140,       'OPTION',      'CHEGG PRINTER GO BRR',   '123444789', 2);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('AAPL',                 110,            120,       'OPTION',      'Apple Moon',             '123456789', 1);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('NIO',                  110,            300,       'OPTION',      'NIO Moon',               '123456789', 1);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('PLTR',                 110,            69,        'OPTION',      'PLTR Moon',              '123456789', 1);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('PLTR',                 110,            120,       'OPTION',      'MONEY PRINTER GO BRR',   '123446789', 2);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('AAPL',                 110,            140,       'OPTION',      'TUITION PRINTER GO BRR', '123446789', 2);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('CHEGG',                110,            140,       'OPTION',      'CHEGG PRINTER GO BRR',   '123446789', 2);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('COOL',                 110,            190,       'OPTION',      'COOL PRINTER GO BRR',    '123444789', 3);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('ICE',                  110,            170,       'OPTION',      'ICEEY PRINTER GO BRR',   '123444789', 3);
+INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
+VALUES ('COOL',                 80,             70,        'OPTION',      'COOL PRINTER GO BRR',    '123444789', 3);
 
 INSERT INTO Organization
 VALUES ('STONks only go up', '69 blvd');
