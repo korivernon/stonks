@@ -1,4 +1,4 @@
-<!-- Tutorial: https://www.youtube.com/watch?v=i16cHmEqJgE -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -64,6 +64,7 @@
             use GloomBerg\Connection as Connection;
             use GloomBerg\GetAcc as GetAcc;
             use GloomBerg\CreateUser as CreateUser;
+            use GloomBerg\FindRank as FindRank;
             ?>
 
             <?php
@@ -89,56 +90,42 @@
                     try{
                         $storeProc = new StoreProc($pdo);
                         $account = $storeProc->getAccount($uname, $password);
+
+                        echo "Hello, " . htmlspecialchars($account['First']);
+
+                        
+                        if ($orgID == NULL){
+                            
+                            echo "You do not belong to an organization :(\n";
+                        } else {
+                            echo "<br><br><h1>ORGANIZATION STATISTICS</h1>";
+                            echo "You belong to " . $orgID . "\n";
+
+                            $orgProfit = $storeProc->OrgProfit($orgid);
+                            echo "<b>Your Organization profit is $</b>" . $orgProfit;
+                            echo "<br>";
+                        }
+                        echo "<br><br><h1>PERSONAL STATISTICS</h1>";
+
+                        //organization profit
+                        $pProfit = $storeProc->UserProfit($ssn);
+                        echo "<b>Your personal profit is $</b>" . $pProfit;
+                        echo "<br>";
+                        echo "<br><br><h1>PERFORMANCE STATS</h1>";
+                    
+                        if ($pProfit > 0) {
+                            echo "Your performance this year is fantastic! ";
+                        } else {
+                            echo "You are lacking my friend. Maybe pick up something else... ";    
+                        }
+                            
                     }catch (\PDOException $e) {
                         echo 'unable to load your account. create one <a href="signup.php">here</a> or try again <a href="login.php">here</a>.';
                     }
-            ?>
-                    <p><?php echo "Hello, " . htmlspecialchars($account['First'])?></p><br>
-                    <p><?php 
-                        if ($orgID == NULL){
-                            echo "You do not belong to an organization :(\n";
-                        } else {
-                            echo "You belong to " . $orgID . "\n";
-                        ?>
-                    </p>
-                    <?php
-                        echo "<br><br><h1>ORGANIZATION STATISTICS</h1>";
-                        
-                        //organization rank
-                        echo "<br>";
-                        $orgRank = 10;
-                        echo "<b>Your organization is ranked: </b>" . $orgRank;
-                        echo "<br>";
+            ?>  
 
-                        //organization profit
-                        $orgProfit = 1000000;
-                        echo "<b>Your Organization profit is $</b>" . $orgProfit;
-                        echo "<br>";
-                    }
-                    echo "<br><br><h1>PERSONAL STATISTICS</h1>";
-
-                    //organization rank
-                    echo "<br>";
-                    $pRank = 1069;
-                    echo "<b>You are ranked: </b>" . $pRank;
-                    echo "<br>";
-
-                    //organization profit
-                    $pProfit = 3083;
-                    echo "<b>Your personal profit is $</b>" . $pProfit;
-                    echo "<br>";
-
-                    echo "<br><br><h1>PERFORMANCE STATS</h1>";
                     
-                    $performance = 40.7;
-                    if ($pProfit > 0) {
-                        echo "Your performance this year is fantastic! ";
-                        echo "With " . $performance . "% positive this year, you're going places!";
-                    } else {
-                        echo "You are lacking my friend. Maybe pick up something else... ";
-                        echo "With " . $performance . "% negative this year, you're NOT going places!";
-                    }
-                    ?>
+                    
             </p>
             
             <a href="trades.php">
