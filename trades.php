@@ -1,6 +1,39 @@
+<?php
+require 'vendor/autoload.php';
 
+use GloomBerg\Connection as Connection;
+use GloomBerg\LoadResults as LoadResults;
+use GloomBerg\LoadStock as LoadStock;
 
-<!-- Tutorial: https://www.youtube.com/watch?v=i16cHmEqJgE -->
+try {
+    $pdo = Connection::get()->connect();
+
+    $storeProc = new StoreProc($pdo);
+
+    $stocks = $storeProc->loadResults($UserID);
+} catch (\PDOException $e) {
+    echo "error loading results";
+}
+try {
+    $pdo = Connection::get()->connect();
+
+    $storeProc = new StoreProc($pdo);
+    
+    
+    $Ticker = $_POST["Ticker"];
+    $purchasedPrice = $_POST["purchasedPrice"];
+    $soldPrice = $_POST["soldPrice"];
+    $Security_type = $_POST["Security_type"];
+    $Reasoning = $_POST["Reasoning"];
+    $SSN = $_POST["SSN"];
+    $OrgID = $_POST["OrgID"];
+
+    $newTransaction->insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type, $Reasoning, $SSN, $OrgID);
+}catch (\PDOException $e) {
+    echo "No Stock Being Loaded";
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -76,22 +109,18 @@
               <th>Profit</th>
               <th>Reasoning</th>
             </tr>
-            <tr>
-              <td>CALL</td>
-              <td>AAPL</td>
-              <td>$350</td>
-              <td>$400</td>
-              <td>$50</td>
-              <td>Stonks only go up</td>
-            </tr>
-            <tr>
-              <td>CALL</td>
-              <td>NIO</td>
-              <td>$90</td>
-              <td>$140</td>
-              <td>$50</td>
-              <td>NIO MOOOOOON</td>
-            </tr>
+            
+            <?php foreach ($stock as $stocks) : ?>
+                <tr>
+                <td><?php echo htmlspecialchars($stock['Security_type']); ?></td>
+                <td><?php echo htmlspecialchars($stock['Ticker']); ?></td>
+                <td><?php echo htmlspecialchars($stock['purchasedPrice']); ?></td>
+                <td><?php echo htmlspecialchars($stock['purchasedPrice']); ?></td>
+                <td><?php echo htmlspecialchars($stock['Profit']); ?></td>
+                <td><?php echo htmlspecialchars($stock['Reasoning']); ?></td>
+                </tr>
+            <? endforeach; ?>
+            
           </table>
           <br><br>
             

@@ -1,6 +1,3 @@
-
-
-<!-- Tutorial: https://www.youtube.com/watch?v=i16cHmEqJgE -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,8 +47,6 @@
 
     <section class="home">
         <div class ="container-fluid w-50 py-3">
-            <!-- Add Type at the Top -->
-            <!-- Logo -->
 
             <h1 class="bold text-center pb-3 animated fadeIn">GloomBerg Stonks</h1>
         </div>
@@ -60,7 +55,7 @@
 
             <br><br>
 
-            <form class="col-md-8 mx-auto" action="home.php" method="post">
+            <form class="col-md-8 mx-auto" action="trades.php" method="post">
                 <div class="form-group">
                     <label for="sectype"></label>
                     <label>Security Type:</label>
@@ -94,11 +89,7 @@
                 <button type="submit" class="btn btn-lg btn-primary">Log Trade</button>
                 
                 </form>
-
                 <br><br>
-
-
-            
             <a href="home.php">
                 <button class="animated fadeIn delay-3s btn btn-lg btn-outline-secondary">Home</button>
             </a>
@@ -109,7 +100,6 @@
             
         </div>
     </section>
-
 
 
     <!-- Footer -->
@@ -123,8 +113,6 @@
             <p>GloomBerg&copy; 2020</p>
         </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

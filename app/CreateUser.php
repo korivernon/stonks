@@ -17,7 +17,6 @@ function insertUser($First, $Last, $Username, $Password, $SSN, $Address, $OrgID)
 
     $stmt->execute();
 
-    // how to add a distinct user id.. 
-    // https://www.postgresqltutorial.com/postgresql-php/insert/
+    return $this->pdo->lastInsertId('user_id_seq');
 }
 ?>

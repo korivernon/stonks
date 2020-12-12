@@ -1,4 +1,11 @@
+<?php            
+    require 'vendor/autoload.php';
 
+    use GloomBerg\Connection as Connection;
+    use GloomBerg\GetAcc as GetAcc;
+    use GloomBerg\CreateUser as CreateUser;
+    use GloomBerg\FindRank as FindRank;
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,15 +64,7 @@
         <div class="animated fadeIn delay-1s container w-75 py-3">
             <p class="py-3 text-justify">
 
-            <?php
             
-            require 'vendor/autoload.php';
-
-            use GloomBerg\Connection as Connection;
-            use GloomBerg\GetAcc as GetAcc;
-            use GloomBerg\CreateUser as CreateUser;
-            use GloomBerg\FindRank as FindRank;
-            ?>
 
             <?php
                 try {
@@ -122,10 +121,7 @@
                     }catch (\PDOException $e) {
                         echo 'unable to load your account. create one <a href="signup.php">here</a> or try again <a href="login.php">here</a>.';
                     }
-            ?>  
-
-                    
-                    
+            ?>             
             </p>
             
             <a href="trades.php">

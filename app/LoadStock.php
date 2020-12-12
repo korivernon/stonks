@@ -1,9 +1,8 @@
 <?php
 
-function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type, $Reasoning, $OrgID, $UserID){
+function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type, $Reasoning, $SSN, $OrgID){
 
-    $sql = 'INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, $Security_type, Reasoning, OrgID, UserID)'
-        . 'VALUES (:Ticker, :purchasedPrice, soldPrice, :Security_type, :Reasoning, :OrgID, :UserID)';
+    $sql = 'INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, $Security_type, Reasoning, SSN, OrgID) VALUES (:Ticker, :purchasedPrice, soldPrice, :Security_type, :Reasoning, :SSN, :OrgID)';
 
     $stmt = $this->pdo->prepare($sql);
 
@@ -13,12 +12,11 @@ function insertTransaction($Ticker, $purchasedPrice, $soldPrice, $Security_type,
     $stmt->bindValue(':Security_type', $Security_type);
     $stmt->bindValue(':Reasoning', $Reasoning);
 
+    $stmt->bindValue(':SSN', $SSN);
     $stmt->bindValue(':OrgID', $OrgID);
-    $stmt->bindValue(':UserID', $UserID);
 
     $stmt->execute();
 
-    // how to add a distinct transaction id.. 
-    // https://www.postgresqltutorial.com/postgresql-php/insert/
+    return $this->pdo->lastInsertId('transaction_id_seq');
 }
 ?>

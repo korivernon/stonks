@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 INSERT INTO Users
 VALUES ('Kori', 'Vernon', 'Soccermomkori', 'iloveorcas87', '123-456-7890', '3412 Birk Bluff',1);
 INSERT INTO Users
 VALUES ('Chuwei', 'Guo', 'Chewwybar', 'notachewybar', '123-446-7890', '1234 Awesome Address',2);
 INSERT INTO Users
 VALUES ('Artur', 'Janik', 'NativeVex', 'NotANativeVex', '123-444-7890', '1235 Awesome Address',3);
-=======
-INSERT INTO Users VALUES ('Kori', 'Vernon', 'Soccermomkori', 'iloveorcas87', '123-456-7890', '3412 Birk Bluff',1);
-INSERT INTO Users VALUES ('Chuwei', 'Guo', 'Chewwybar', 'notachewybar', '123-446-7890', '1234 Awesome Address',2);
-INSERT INTO Users VALUES ('Artur', 'Janik', 'NativeVex', 'NotANativeVex', '123-444-7890' , '1235 Awesome Address',3);
->>>>>>> refs/remotes/origin/main
 
 INSERT INTO Transaction(Ticker, purchasedPrice, soldPrice, Security_type, Reasoning,                UserID,      orgID)
 VALUES ('CHEGG',                110,            140,       'OPTION',      'CHEGG PRINTER GO BRR',   '123444789', 2);

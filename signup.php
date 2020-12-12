@@ -111,10 +111,7 @@
                         
                     </div>
                     
-                    <button type="submit" class="btn btn-lg btn-primary">Sign Up</button>
-
-                    
-                    
+                    <button type="submit" class="btn btn-lg btn-primary">Sign Up</button>            
                   </form>
                   
                   

@@ -92,21 +92,7 @@
                 <div class="mx-auto heading-line"></div>
             </div>
             <div class="row">
-                <!-- <div class="col-lg-6">
-                    <div id="map-container-google-1" class="z-depth-1-half map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193747.65734576355!2d-74.08508155679834!3d40.645159363485455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY!5e0!3m2!1sen!2sus!4v1586920499946!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                </div> -->
-
-                <!-- <form action="home.php" method="post">
-                  Username: <input name="username" type="text">
-                  <br><br>
-                  Password: <input name="password" type="password">
-                  <br><br>
-                  Organization: <input name="organization" type="text">
-                  <br><br>
-                  <input type="submit">
-                </form> -->
+                
 
                 <form class="col-md-8 mx-auto" action="home.php" method="post">
                     <div class="form-group">
